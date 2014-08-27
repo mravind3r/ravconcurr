@@ -1,0 +1,22 @@
+logic
+
+
+producer thread
+
+1) get customer , check inventory if room avail 
+  a) if yes do the booking based on criteria given
+
+2) if room not avail for any customer put them in delay queue  
+ 
+
+consumer thread logic
+
+  1) first check on the delay queue , this is shared  
+  2) then copy the items to a priority queue and poll the first one and book it
+  3) remove the polled object from the delay queue
+  
+  
+  // gotchas 
+  have to protect  
+  
+  
